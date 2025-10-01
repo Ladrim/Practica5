@@ -1,3 +1,5 @@
+package org.alfonso.api.stream.ejemplos;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
