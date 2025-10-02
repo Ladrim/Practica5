@@ -17,7 +17,6 @@ public class Test1
         test.stream().map(String::toUpperCase);
         Stream<String>stream = test.stream();
 
-
         test.forEach(a-> System.out.println(a));
         test.stream().forEach(a-> System.out.println(a));
 
