@@ -14,6 +14,7 @@ public class Test10
         listaDeNombres.add("MELONCIO LIMONES");
         listaDeNombres.add("EUSTAQUIO MENTECATO");
         listaDeNombres.add("EUSTAQUIO MACUTO");
+        listaDeNombres.add("BURRACO CENUTRIO");
 
         Usuario usuario = listaDeNombres.stream()
                 .map(it ->  {return  new Usuario(it.split(" ")[0], it.split(" ")[1],null,null);})
