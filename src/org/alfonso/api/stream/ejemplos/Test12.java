@@ -10,8 +10,8 @@ public class Test12
 {
     public static void main(String[] args)
     {
-        UsuarioFactura u1 = new UsuarioF("Gordinflon","Zampabollos");
-        UsuarioFactura u2 = new UsuarioF("Perico","Delospalotes");
+        UsuarioFactura u1 = new UsuarioFactura("Gordinflon","Zampabollos");
+        UsuarioFactura u2 = new UsuarioFactura("Perico","Delospalotes");
 
         Factura f1 = new Factura("Factura1");
         Factura f2 = new Factura("Factura2");
