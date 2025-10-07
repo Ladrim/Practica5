@@ -20,7 +20,7 @@ public class Test14
 
         Stream<String> streamDeUsuarios = lista.stream()
                 .map(it -> it.getNombre() + " " + it.getApellido())
-                .filter(it -> it.equalsIgnoreCase("Perico Palotes"));
+                .filter(it -> it.equalsIgnoreCase("Donkey Kong Bananza"));
 
         streamDeUsuarios.forEach(it -> System.out.println(it));
     }
