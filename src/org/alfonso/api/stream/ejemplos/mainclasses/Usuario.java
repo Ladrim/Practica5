@@ -1,6 +1,8 @@
-package org.alfonso.api.stream.ejemplos.borrame.mainclasses;
+package org.alfonso.api.stream.ejemplos.mainclasses;
 
-public class Persona
+import java.util.Objects;
+
+public class Usuario
 {
     private String nombre;
     private String apellido;
@@ -8,16 +10,14 @@ public class Persona
     private String dni;
     private Integer id;
     private static int ultimoId;
-    private int codigo;
 
-    public Persona(String nombre, String apellido, Integer edad, String dni, int codigo)
+    public Usuario(String nombre, String apellido,Integer edad, String dni)
     {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
         this.dni = dni;
         this.id = ++ultimoId;
-        this.codigo = codigo;
     }
 
     public String getNombre() {return nombre;}
@@ -30,8 +30,6 @@ public class Persona
 
     public Integer getId() {return id;}
 
-    public int getCodigo() {return codigo;}
-
     public void setNombre(String nombre) {this.nombre = nombre;}
 
     public void setApellido(String apellido) {this.apellido = apellido;}
@@ -40,8 +38,20 @@ public class Persona
 
     public void setId(Integer id) {this.id = id;}
 
-    public void setCodigo(int codigo) {this.codigo = codigo;}
 
     @Override
-    public String toString() {return  nombre  + " " + apellido + "\n Edad: " + edad  + "\n DNI " + dni + "\n Codigo " + codigo + "\n id:" + id + "\n";}
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Usuario usuario = (Usuario) o;
+        return Objects.equals(nombre, usuario.nombre) && Objects.equals(apellido, usuario.apellido);
+    }
+
+    @Override
+    public int hashCode() {
+        return 0;
+    }
+
+    @Override
+    public String toString() {return  nombre  + " " + apellido + "\n Edad: " + edad  + "\n DNI " + dni +  "\n id:" + id + "\n";}
 }

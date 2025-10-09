@@ -1,7 +1,7 @@
-package org.alfonso.api.stream.ejemplos.borrame;
+package org.alfonso.api.stream.ejemplos;
 
-import org.alfonso.api.stream.ejemplos.borrame.mainclasses.Factura;
-import org.alfonso.api.stream.ejemplos.borrame.mainclasses.UsuarioFactura;
+import org.alfonso.api.stream.ejemplos.mainclasses.Factura;
+import org.alfonso.api.stream.ejemplos.mainclasses.UsuarioFactura;
 
 import java.util.Arrays;
 import java.util.List;
