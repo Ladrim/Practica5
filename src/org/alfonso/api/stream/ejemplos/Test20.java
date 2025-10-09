@@ -33,6 +33,7 @@ public class Test20
 
 
         List<String> nombresToUpperCase = stream.collect(Collectors.toList());
+
         nombresToUpperCase.forEach(nombre-> System.out.println(nombre + "\n") );
 
 
