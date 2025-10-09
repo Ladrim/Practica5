@@ -8,13 +8,15 @@ public class Test18
     public static void main(String[] args) throws Exception
     {
         List<String> listaDeNombres = new ArrayList<>();
-        listaDeNombres.add("TOMASITO PERALES");
-        listaDeNombres.add("MELONCIO LIMONES");
-        listaDeNombres.add("EUSTAQUIO MENTECATO");
-        listaDeNombres.add("TOMASITO PERALES");
-        listaDeNombres.add("TOMASITO PERALES");
-        listaDeNombres.add("JUANITO PERALES");
-        listaDeNombres.add("ALFONSO MENTECATO");
+        listaDeNombres.add("PAQUIN MACUTO");
+        listaDeNombres.add("PERICO PALOTES");
+        listaDeNombres.add("EUSTAQUIO CABESA");
+        listaDeNombres.add("MANOLIN CORTIN");
+        listaDeNombres.add("PEROLO BASESIN");
+        listaDeNombres.add("TIMOTEO CABEZAHUEVO");
+        listaDeNombres.add("CABESTRO CABEZAHUEVO");
+        listaDeNombres.add("RAQUITIN CABEZAHUEVO");
+        listaDeNombres.add("RAQUITIN BONIATIN");
 
         String resultado = listaDeNombres.stream()
                 .distinct()
