@@ -19,7 +19,6 @@ public class Test11
         listaDeNombres.add("TIMOTEO CABEZAHUEVO");
         listaDeNombres.add("CABESTRO CABEZAHUEVO");
         listaDeNombres.add("RAQUITIN CABEZAHUEVO");
-        listaDeNombres.add("RAQUITIN BONIATIN");
 
         Stream<Usuario> streamDeUsuarios = listaDeNombres.stream()
                 .map(nombre ->  {return  new Usuario(nombre.split(" ")[0], nombre.split(" ")[1],null,null);})
