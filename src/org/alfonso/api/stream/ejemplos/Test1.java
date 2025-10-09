@@ -13,6 +13,7 @@ public class Test1
         test.add("Vicentin");
         test.add("Periquin");
         test.add("Camelas");
+        test.add("Periquin");
 
         test.stream().map(String::toUpperCase);
         Stream<String>stream = test.stream();
