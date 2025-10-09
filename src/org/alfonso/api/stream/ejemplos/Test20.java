@@ -16,6 +16,7 @@ public class Test20
         nombres.add("Peponcio");
         nombres.add("Regulin");
         nombres.add("Tomasito");
+        nombres.add("Vicentico");
 
         for(String nombre : nombres)
         {
