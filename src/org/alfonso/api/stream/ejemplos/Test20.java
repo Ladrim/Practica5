@@ -17,7 +17,6 @@ public class Test20
         nombres.add("Regulin");
         nombres.add("Tomasito");
 
-
         for(String nombre : nombres)
         {
             System.out.println(nombre);
