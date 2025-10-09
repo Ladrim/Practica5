@@ -1,4 +1,4 @@
-package org.alfonso.api.stream.ejemplos.mainclasses;
+package org.alfonso.api.stream.ejemplos.borrame.mainclasses;
 
 import java.util.ArrayList;
 import java.util.List;

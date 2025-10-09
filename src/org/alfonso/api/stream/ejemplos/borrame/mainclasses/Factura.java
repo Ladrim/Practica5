@@ -1,4 +1,4 @@
-package org.alfonso.api.stream.ejemplos.mainclasses;
+package org.alfonso.api.stream.ejemplos.borrame.mainclasses;
 
 public class Factura
 {

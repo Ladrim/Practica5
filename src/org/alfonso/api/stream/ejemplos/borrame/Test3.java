@@ -1,6 +1,6 @@
-package org.alfonso.api.stream.ejemplos;
+package org.alfonso.api.stream.ejemplos.borrame;
 
-import org.alfonso.api.stream.ejemplos.mainclasses.Usuario;
+import org.alfonso.api.stream.ejemplos.borrame.mainclasses.Usuario;
 
 import java.util.ArrayList;
 import java.util.IntSummaryStatistics;

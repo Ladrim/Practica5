@@ -1,12 +1,11 @@
-package org.alfonso.api.stream.ejemplos;
+package org.alfonso.api.stream.ejemplos.borrame;
 
-import org.alfonso.api.stream.ejemplos.mainclasses.Usuario;
+import org.alfonso.api.stream.ejemplos.borrame.mainclasses.Usuario;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
-public class Test2
+public class Test7
 {
     public static void main(String[] args) throws Exception
     {
@@ -21,10 +20,11 @@ public class Test2
         listaDeNombres.add("RAQUITIN CABEZAHUEVO");
         listaDeNombres.add("RAQUITIN BONIATIN");
 
-        Stream<Usuario> usuarioOptional = listaDeNombres.stream()
-                .map(it -> new Usuario(it.split(" ")[0], it.split(" ")[1],null,null) )
-                .distinct();
+        long count = listaDeNombres.stream()
+                .peek(it -> System.out.println(it)) // NO USAR
+                .map(it ->  {return  new Usuario(it.split(" ")[0], it.split(" ")[1],null,null);})
+                .count();
 
-        usuarioOptional.forEach(it -> System.out.println(it));
+        System.out.println(count);
     }
 }
