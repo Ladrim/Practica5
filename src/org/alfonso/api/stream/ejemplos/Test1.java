@@ -32,5 +32,6 @@ public class Test1
 
         Stream<String> nombres3 = Stream.<String>builder().add("Eustaquio").add("Meloncio").add("Moniato").add("Camelas").build();
         nombres3.forEach(a-> System.out.println(a));
+
     }
 }
