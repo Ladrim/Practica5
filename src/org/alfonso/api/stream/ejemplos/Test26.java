@@ -25,5 +25,9 @@ public class Test26
 
         Map<String, List<Persona>> mapaDePersonasPorApellido = listaDeUsuarios.stream()
                 .collect(Collectors.groupingBy(it -> it.getApellido()));
+
+        Map<String, Integer> mapaNumeroDeApellidos = mapaDePersonasPorApellido.entrySet().stream() //ENTRY
+                .map(it -> Map.entry(it.getKey(),it.getValue().size()))  //modifiques el ENTRY
+                .collect(Collectors.toMap(it -> it.getKey(), it-> it.getValue()));
     }
 }
