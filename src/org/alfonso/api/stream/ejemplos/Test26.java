@@ -1,0 +1,29 @@
+package org.alfonso.api.stream.ejemplos;
+
+import org.alfonso.api.stream.ejemplos.mainclasses.Persona;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class Test26
+{
+    public static void main(String[] args) {
+        List<Persona> listaDeUsuarios = new ArrayList<>();
+        listaDeUsuarios.add(new Persona("DONKEY KONG", "BANANZA", 40, "12345A", 1));
+        listaDeUsuarios.add(new Persona("DIDDI KONG", "RACING", 45, "23456B", 2));
+        listaDeUsuarios.add(new Persona("TROLERO", "BONIATO", 59, "34567C", 3));
+        listaDeUsuarios.add(new Persona("MACUTIN", "MENTECATO", 68, "45678D", 4));
+        listaDeUsuarios.add(new Persona("MARIO", "BROSS", 20, "56789F", 5));
+        listaDeUsuarios.add(new Persona("LUIGGI", "BROSS", 20, "67899J", 6));
+
+
+        Map<Integer, Persona> mapaDePersonasPorCodigo = listaDeUsuarios.stream()
+             .collect(Collectors.toMap(it -> it.getCodigo(),it-> it));
+
+
+        Map<String, List<Persona>> mapaDePersonasPorApellido = listaDeUsuarios.stream()
+                .collect(Collectors.groupingBy(it -> it.getApellido()));
+    }
+}
