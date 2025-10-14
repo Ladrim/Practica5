@@ -2,9 +2,7 @@ package org.alfonso.api.stream.ejemplos;
 
 import org.alfonso.api.stream.ejemplos.mainclasses.Persona;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Test26
@@ -26,8 +24,12 @@ public class Test26
         Map<String, List<Persona>> mapaDePersonasPorApellido = listaDeUsuarios.stream()
                 .collect(Collectors.groupingBy(it -> it.getApellido()));
 
-        Map<String, Integer> mapaNumeroDeApellidos = mapaDePersonasPorApellido.entrySet().stream() //ENTRY
-                .map(it -> Map.entry(it.getKey(),it.getValue().size()))  //modifiques el ENTRY
+        Map<String, Integer> mapaNumeroDeApellidos = mapaDePersonasPorApellido.entrySet().stream()
+                .map(it -> Map.entry(it.getKey(),it.getValue().size()))
                 .collect(Collectors.toMap(it -> it.getKey(), it-> it.getValue()));
+
+        Optional<Map.Entry<String, Integer>> masRepetido = mapaNumeroDeApellidos.entrySet().stream()
+                .sorted(Comparator.comparing((Map.Entry<String, Integer> it) -> it.getValue()).reversed())
+                .findFirst();
     }
 }
