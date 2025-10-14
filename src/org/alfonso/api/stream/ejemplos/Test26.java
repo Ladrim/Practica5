@@ -43,5 +43,13 @@ public class Test26
                 .collect(Collectors.toMap(it -> it.getKey(), it -> it.getValue().size())).entrySet().stream()
                 .sorted(Comparator.comparing((Map.Entry<String, Integer> it) -> it.getValue()).reversed())
                 .findFirst();
+
+        Integer numero2 = optional.map( it -> it.getValue()).orElse(0);
+        String apellido2 = optional.map( it -> it.getKey() ).orElse("NINGUNO");
+
+        listaDeUsuarios.stream()
+                .collect(Collectors.groupingBy(Persona::getApellido, Collectors.counting())).entrySet().stream()
+                .sorted(Comparator.comparing(Map.Entry::getValue, Comparator.reverseOrder()))
+                .findFirst();
     }
 }
