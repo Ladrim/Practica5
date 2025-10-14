@@ -34,5 +34,14 @@ public class Test26
 
         Integer numero = masRepetido.map( it -> it.getValue()).orElse(0);
         String apellido = masRepetido.map( it -> it.getKey() ).orElse("NINGUNO");
+
+        System.out.println(numero);
+        System.out.println(apellido);
+
+        Optional<Map.Entry<String, Integer>>optional = listaDeUsuarios.stream()
+                .collect(Collectors.groupingBy( it -> it.getApellido())).entrySet().stream()
+                .collect(Collectors.toMap(it -> it.getKey(), it -> it.getValue().size())).entrySet().stream()
+                .sorted(Comparator.comparing((Map.Entry<String, Integer> it) -> it.getValue()).reversed())
+                .findFirst();
     }
 }
