@@ -6,9 +6,9 @@ import java.util.List;
 
 public class Aula
 {
-    public List<Test27.Alumno> alumnos;
+    public List<Alumno> alumnos;
 
-    public Aula(List<Test27.Alumno> alumnos)
+    public Aula(List<Alumno> alumnos)
     {
         this.alumnos = alumnos;
     }

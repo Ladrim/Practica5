@@ -1,5 +1,8 @@
 package org.alfonso.api.stream.ejemplos;
 
+import org.alfonso.api.stream.ejemplos.mainclasses.Alumno;
+import org.alfonso.api.stream.ejemplos.mainclasses.Aula;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -36,30 +39,5 @@ public class Test27
         listasAlumnos.forEach(System.out::println);
 
         alumnos.forEach(System.out::println);
-    }
-
-    public static class Aula
-    {
-        public List<Alumno>alumnos;
-
-        public Aula(List<Alumno> alumnos)
-        {
-            this.alumnos = alumnos;
-        }
-    }
-
-    public static class Alumno
-    {
-        public String nombre;
-
-        public Alumno(String nombre)
-        {
-            this.nombre = nombre;
-        }
-
-        @Override
-        public String toString() {
-            return nombre;
-        }
     }
 }
